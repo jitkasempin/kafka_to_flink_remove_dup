@@ -1,2 +1,4 @@
-# kafka_to_flink_remove_dup
-The other way to implement remove duplicate data from Kafka topic (receive String from Kafka topic).
+# kafka_flink_deduplicate1
+This project consume the message from Kafka topic using Flink and do deduplication on the incoming message.
+
+By follow the implementation of deduplication on Flink at https://github.com/jgrier/FilteringExample
