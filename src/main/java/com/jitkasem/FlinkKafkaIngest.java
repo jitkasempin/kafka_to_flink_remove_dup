@@ -50,15 +50,15 @@ public class FlinkKafkaIngest {
         }
     }
 
-    private static FlinkKafkaConsumer09<String> kafkaConsumer() {
+    private static FlinkKafkaConsumer011<String> kafkaConsumer() {
 
         final Properties properties = new Properties();
 
         properties.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, KAFKA_BROKER_ADDRESS);
 
-        properties.put(ConsumerConfig.GROUP_ID_CONFIG, "kafka-stream-basket");
+        //properties.put(ConsumerConfig.GROUP_ID_CONFIG, "kafka-stream-basket");
 
-        return new FlinkKafkaConsumer09<>(
+        return new FlinkKafkaConsumer011<>(
 
                 INPUT_TOPIC,
 
@@ -69,13 +69,13 @@ public class FlinkKafkaIngest {
     }
 
 
-    private static FlinkKafkaProducer09<String> kafkaProducer() {
+    private static FlinkKafkaProducer011<String> kafkaProducer() {
 
         final Properties properties = new Properties();
 
         properties.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, KAFKA_BROKER_ADDRESS);
 
-        return new FlinkKafkaProducer09<>(
+        return new FlinkKafkaProducer011<>(
 
                 OUTPUT_TOPIC,
 
