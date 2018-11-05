@@ -25,7 +25,7 @@ public class FlinkKafkaIngest {
     private static long CACHE_EXPIRATION_TIME_MS = 5_000;
 
     private static String KAFKA_BROKER_ADDRESS = "localhost:9092";
-    private static String INPUT_TOPIC = "confluent-out-prices";
+    private static String INPUT_TOPIC = "test-in-value";
     private static String OUTPUT_TOPIC = "test-output-value";
 
 
